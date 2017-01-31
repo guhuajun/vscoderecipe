@@ -7,15 +7,19 @@ Visual Studio Code 使用技巧集
 ========================================
 
 目录
+====
 
 .. toctree::
    :maxdepth: 2
 
-关于本文档作者
+
+* 工具链
+* 使用Visual Studio Code开发Django项目
+* 关于本文的作者
 
 
 
-Indices and tables
+索引和表
 ==================
 
 * :ref:`genindex`
