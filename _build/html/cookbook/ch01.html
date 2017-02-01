@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>工具链 &mdash; vscoderecipe 0.1 - 20170131 文档</title>
+  <title>Visual Studio Code 概要 &mdash; vscoderecipe 0.1 - 20170131 文档</title>
   
 
   
@@ -36,8 +36,8 @@
               href="../genindex.html"/>
         <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="vscoderecipe 0.1 - 20170131 文档" href="../index.html"/>
-        <link rel="next" title="关于我" href="../about.html"/>
-        <link rel="prev" title="如何下载及安装Visual Studio Code" href="../cookbook/rcp001.html"/> 
+        <link rel="next" title="工具链" href="../toolchains/01. toolchains.html"/>
+        <link rel="prev" title="Visual Studio Code 使用技巧集" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -87,16 +87,13 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../cookbook/rcp000.html">关于Visual Studio Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cookbook/rcp001.html">如何下载及安装Visual Studio Code</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">工具链</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id3">我的工具链</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#cmder">Cmder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#git">Git 客户端</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Visual Studio Code 概要</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">关于 Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">如何下载及安装 Visual Studio Code</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../toolchains/01. toolchains.html">工具链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toolchains/02. sphinx.html">如何使用Sphinx书写文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">关于我</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">版权申明</a></li>
 </ul>
@@ -129,11 +126,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>工具链</li>
+    <li>Visual Studio Code 概要</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/toolchains/toolchains.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/cookbook/ch01.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,41 +140,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>工具链<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>在软件开发中，工具链（英语：toolchain  <a class="footnote-reference" href="#f1" id="id2">[1]</a> ）是一系列用于制作软件的工具。这些工具一般一个接一个地运用，一件工具的输出输入至下一件工具，因此得名。但广义上可以单单是指多个相关的工具。</p>
-<p>在这份文档中是指广义上的工具链，相近的概念是工具带（英语：tool belt）。如果本文的读者和我一样曾经大量阅读微软出版社的技术书籍的话，那一定会对相关书籍的封面记忆犹新。</p>
-<a class="reference internal image-reference" href="../_images/001.70-646.jpg"><img alt="../_images/001.70-646.jpg" src="../_images/001.70-646.jpg" style="width: 250.0px; height: 304.5px;" /></a>
-<div class="section" id="id3">
-<h2>我的工具链<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>对一名开发者来说，充分利用各式各样的工具来加快开发进度，是根植在我们心中的坚定信念。作为一名目前使用Python作为主力开发语言的开发者，我现在常用的工具如下，供大家参考。同时我目前基于Windows平台进行开发。</p>
-<div class="section" id="cmder">
-<h3>Cmder<a class="headerlink" href="#cmder" title="永久链接至标题">¶</a></h3>
-<p>Cmder 是由 Samuel Vasko 开发的命令行模拟器，用来增强Windows下的命令行功能。在官网 <a class="footnote-reference" href="#f2" id="id4">[2]</a> 上可以选择精简版或者完整版进行安装。完整版本中包含了git-for-windows，这意味着你可以在Windows下直接运行Linux命令的移植版本，来实现Linux下相同的操作。当然你也可以安装独立的Git客户端在搭配使用精简版的Cmder。比如下图中显示的就是在Cmder中使用ssh命令链接Azure上运行的Linux虚拟机。同时Cmder也是Django项目开发过程中必不可少的一个工具，在相关章节会涉及到该部分内容。</p>
-<a class="reference internal image-reference" href="../_images/002.cmder.jpg"><img alt="../_images/002.cmder.jpg" src="../_images/002.cmder.jpg" style="width: 445.0px; height: 260.0px;" /></a>
+  <div class="section" id="visual-studio-code">
+<h1>Visual Studio Code 概要<a class="headerlink" href="#visual-studio-code" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>关于 Visual Studio Code<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>Visual Studio Code是微软公司在2015年Build大会上宣布的一款跨平台的轻量级代码编辑器。它支持调试，Git版本管理，语法高亮，智能代码补全，代码片段及代码重构。同时支自定义设置及扩展，用户可以修改编辑器的主题，键盘快捷键及偏好设置。并且项目源代码已经在Github上开源。</p>
+<p>自从Visual Studio Code 0.3.0于2015年六月发布以来，整个项目历经了多个版本的迭代，目前最新版本是1.8.1。在2016年度Github开源代码贡献者数量最多的排行榜上Visual Studio Code名列前十 <a class="footnote-reference" href="#f1" id="id2">[1]</a> ，可见项目发展十分迅速。截止到2017年1月31日为止，Visual Studio Code的插件数量已经达到了2038个，涵盖了诸多开发语言 <a class="footnote-reference" href="#f2" id="id3">[2]</a> 。</p>
+<p>纵观整个开发语言插件，微软生态圈内的旗舰开发语言C#排名第一，这点毫不意外。使用Visual Studio Code进行.NET Core开发 <a class="footnote-reference" href="#f3" id="id4">[3]</a> 应该是主要的使用场景。而排名第二的则是在这几年在多个领域大放光彩的Python。本文档也会花一定篇幅介绍如何使用Visual Studio Code进行Django项目的开发工作。目标是为广大的Python开发者介绍一款新的代码编辑器。</p>
+<p>最后作为总结，Visual Studio 是宇宙第一没有之一的集成开发环境，而Visual Studio Code也正在成为王者的路上。</p>
 </div>
-<div class="section" id="git">
-<h3>Git 客户端<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h3>
-<p>Git 客户端就不用多介绍，用来进行版本管理的工具，可以从官网 <a class="footnote-reference" href="#f3" id="id5">[3]</a> 下载适用于Windows平台的最新版。至于项目托管平台，Github或者国内的coding.net都是不错的选择，如果是公司项目那可以选择自建Gitlab。</p>
+<div class="section" id="id5">
+<h2>如何下载及安装 Visual Studio Code<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/Toolchain">https://en.wikipedia.org/wiki/Toolchain</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="https://octoverse.github.com/">https://octoverse.github.com/</a></td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="f2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[2]</a></td><td><a class="reference external" href="http://cmder.net/">http://cmder.net/</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td><a class="reference external" href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Languages&amp;sortBy=Downloads">https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Languages&amp;sortBy=Downloads</a></td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="f3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[3]</a></td><td><a class="reference external" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id4">[3]</a></td><td><a class="reference external" href="https://docs.microsoft.com/en-us/aspnet/core/getting-started">https://docs.microsoft.com/en-us/aspnet/core/getting-started</a></td></tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 
@@ -188,10 +179,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../about.html" class="btn btn-neutral float-right" title="关于我" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../toolchains/01. toolchains.html" class="btn btn-neutral float-right" title="工具链" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../cookbook/rcp001.html" class="btn btn-neutral" title="如何下载及安装Visual Studio Code" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral" title="Visual Studio Code 使用技巧集" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
