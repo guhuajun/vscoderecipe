@@ -17,7 +17,6 @@ Visual Studio Code是微软公司在2015年Build大会上宣布的一款跨平�
 ---------------------------------
 
 
-
 .. [#f1] https://octoverse.github.com/
 .. [#f2] https://marketplace.visualstudio.com/search?target=VSCode&category=Languages&sortBy=Downloads
 .. [#f3] https://docs.microsoft.com/en-us/aspnet/core/getting-started

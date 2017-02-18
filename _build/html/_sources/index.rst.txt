@@ -9,4 +9,5 @@ Visual Studio Code 使用技巧集
     
     cookbook/*
     toolchains/*
+    django/*
     *

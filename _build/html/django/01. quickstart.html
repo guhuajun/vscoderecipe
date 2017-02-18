@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>如何使用Visual Studio Code开发Django项目 &mdash; vscoderecipe 0.1 - 201702 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="author" title="关于这些文档"
+              href="../about.html"/>
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="top" title="vscoderecipe 0.1 - 201702 文档" href="../index.html"/>
+        <link rel="next" title="关于我" href="../about.html"/>
+        <link rel="prev" title="关于本文档集" href="../toolchains/02. sphinx.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> vscoderecipe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cookbook/ch01.html">Visual Studio Code 概要</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toolchains/01. toolchains.html">工具链</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toolchains/02. sphinx.html">关于本文档集</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">如何使用Visual Studio Code开发Django项目</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#visual-studio-code">如何获得 Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">前提条件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">如何将Visual Studio Code配置成Django项目开发环境</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">安装插件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#django">创建Django测试项目并进行配置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于我</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">版权申明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">vscoderecipe</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>如何使用Visual Studio Code开发Django项目</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/django/01. quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="visual-studio-codedjango">
+<h1>如何使用Visual Studio Code开发Django项目<a class="headerlink" href="#visual-studio-codedjango" title="永久链接至标题">¶</a></h1>
+<div class="section" id="visual-studio-code">
+<h2>如何获得 Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="永久链接至标题">¶</a></h2>
+<p>访问 <a class="reference external" href="http://code.visualstudio.com">http://code.visualstudio.com</a> 下载并安装。</p>
+</div>
+<div class="section" id="id1">
+<h2>前提条件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>安装Python 2.7 及 Python 3.5，Windows下可以安装至 c:python27 及 c:python35。注意环境变量PATH的设置，建议只在PATH中添加一个版本的Python路径。Python 安装完后需要使用pip命令安装virtualenv模块，该模块负责隔离不同项目开发之间的模块依赖。</p>
+<p>在安装完后，如果是Windows操作系统，可以在%USERPROFILE%下创建pip文件夹，并在该文件夹内创建包含以下内容的pip.ini文件，该文件的作用是让pip命令通过阿里云的镜像站点安装Python模块。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">global</span><span class="p">]</span>
+<span class="n">index</span><span class="o">-</span><span class="n">url</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span>
+
+<span class="p">[</span><span class="n">install</span><span class="p">]</span>
+<span class="n">trusted</span><span class="o">-</span><span class="n">host</span> <span class="o">=</span> <span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>如何将Visual Studio Code配置成Django项目开发环境<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>推荐在Windows下使用cmder作为首选命令行工具，配合最新版Git客户端使用，即可在Windows下使用linux命令的移植版本。项目文件夹可为d:repos。</p>
+<p>通常vscode应该以文件夹的形式打开项目，可以在cmder中通过cd命令切换目录至项目文件夹，例如d:reposdemo，然后再执行 code . 打开项目。</p>
+<p>推荐将vscode界面语言配置成英文，方式为在vscode窗口中按下 Ctrl + Shift + P，输入 语言，选择配置语言，再打开的配置文件中，将locale设置为en-US</p>
+<a class="reference internal image-reference" href="../_images/001.png"><img alt="../_images/001.png" src="../_images/001.png" style="width: 330.0px; height: 74.5px;" /></a>
+<div class="section" id="id3">
+<h3>安装插件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<ol class="arabic simple">
+<li>打开 vscode，按下 Ctrl + Shift + X 打开插件管理侧边栏。</li>
+<li>依次安装下列插件</li>
+</ol>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Git</span> <span class="n">history</span>
+<span class="n">Python</span>
+<span class="n">Django</span> <span class="n">Template</span>
+<span class="n">jquery</span> <span class="n">Code</span> <span class="n">Snippets</span>
+<span class="n">Bootstrap</span> <span class="mi">3</span> <span class="n">Snippets</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="django">
+<h2>创建Django测试项目并进行配置<a class="headerlink" href="#django" title="永久链接至标题">¶</a></h2>
+<p>VS Code提供了两种范围的设置，分别是User及Workspace. 用户级别的设置可以理解为全局设置，其中的设置对任一vscode实例都生效。工作区级别的设置则仅针对当前项目生效，配置文件存放在项目的 .vscode 文件夹中。一般在项目开发中我们使用工作区级别的设置。以下步骤记录了如何建立Django项目的基本目录结构。</p>
+<ol class="arabic simple">
+<li>创建项目文件夹，例如 mkdir e:tempdjango_demo，并当前目录切换到该文件夹</li>
+<li>在项目文件夹中使用virtualenv env 创建env文件夹</li>
+<li>创建 requirements.txt 文件，文件中添加以下内容，pylint为python的静态语法检测器，pylint-django 是适用于django项目的语法检查其插件，autopep8 是代码格式化工具</li>
+</ol>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">django</span><span class="o">&lt;</span><span class="mf">1.10</span>
+<span class="n">pylint</span>
+<span class="n">pylint</span><span class="o">-</span><span class="n">django</span>
+<span class="n">autopep8</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>执行 envScriptsactivate.bat 激活虚拟环境</li>
+<li>执行 pip install -r requirements.txt 安装相关模块</li>
+<li>执行 django-admin startproject demo . 在当前目录下创建django项目文件夹</li>
+<li>执行 python manage.py startapp web 新建django app</li>
+<li>执行 code . 在当前配置打开项目</li>
+<li>在 vscode 中按下 Ctrl + Shift + P，输入 select，选择 Python: Select Workspace Interpreter，在出现的选项中将Python解析器指向env文件夹中的python</li>
+</ol>
+<img alt="../_images/002.png" src="../_images/002.png" />
+<p>#. 在 vscode 中按下 Ctrl + Shift + P，输入 workspace，选择 Preferences: Open Workspace Settings，配置完成后的JSON文件如下</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;python.pythonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;e:/temp/django_demo/env/scripts/python.exe&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;python.linting.pylintPath&quot;</span><span class="p">:</span> <span class="s2">&quot;pylint&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;python.linting.pylintArgs&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;--load-plugins&quot;</span><span class="p">,</span> <span class="s2">&quot;pylint_django&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;python.formatting.autopep8Path&quot;</span><span class="p">:</span> <span class="s2">&quot;autopep8&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li>成功配置完成后，vscode 会在状态栏中提示代码是否符合 pylint的相关规则。之后我们可以在此基础上继续项目开发。</li>
+</ol>
+<img alt="../_images/003.png" src="../_images/003.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../about.html" class="btn btn-neutral float-right" title="关于我" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../toolchains/02. sphinx.html" class="btn btn-neutral" title="关于本文档集" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Huajun (Greg) Gu.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1 - 201702',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
