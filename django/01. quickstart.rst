@@ -63,7 +63,7 @@ VS Code提供了两种范围的设置，分别是User及Workspace. 用户级别�
     pylint-django
     autopep8
 
-#. 执行 env\Scripts\activate.bat 激活虚拟环境
+#. 执行 env\\Scripts\\activate.bat 激活虚拟环境
 #. 执行 pip install -r requirements.txt 安装相关模块
 #. 执行 django-admin startproject demo . 在当前目录下创建django项目文件夹
 #. 执行 python manage.py startapp web 新建django app
@@ -72,7 +72,7 @@ VS Code提供了两种范围的设置，分别是User及Workspace. 用户级别�
 
 .. image:: images/002.png
 
-#. 在 vscode 中按下 Ctrl + Shift + P，输入 workspace，选择 Preferences: Open Workspace Settings，配置完成后的JSON文件如下
+6. 在 vscode 中按下 Ctrl + Shift + P，输入 workspace，选择 Preferences: Open Workspace Settings，配置完成后的JSON文件如下
 ::
 
     {
@@ -87,3 +87,4 @@ VS Code提供了两种范围的设置，分别是User及Workspace. 用户级别�
 7. 成功配置完成后，vscode 会在状态栏中提示代码是否符合 pylint的相关规则。之后我们可以在此基础上继续项目开发。
 
 .. image:: images/003.png
+    :scale: 50 %
