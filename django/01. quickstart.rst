@@ -72,7 +72,7 @@ VS Code提供了两种范围的设置，分别是User及Workspace. 用户级别�
 
 .. image:: images/002.png
 
-#. 在 vscode 中按下 Ctrl + Shift + P，输入 workspace，选择 Preferences: Open Workspace Settings，配置完成后的JSON文件如下
+7. 在 vscode 中按下 Ctrl + Shift + P，输入 workspace，选择 Preferences: Open Workspace Settings，配置完成后的JSON文件如下
 ::
 
     {
@@ -84,7 +84,7 @@ VS Code提供了两种范围的设置，分别是User及Workspace. 用户级别�
         "python.formatting.autopep8Path": "autopep8"
     }
 
-#. 成功配置完成后，vscode 会在状态栏中提示代码是否符合 pylint的相关规则。之后我们可以在此基础上继续项目开发。
+8. 成功配置完成后，vscode 会在状态栏中提示代码是否符合 pylint的相关规则。之后我们可以在此基础上继续项目开发。
 
 .. image:: images/003.png
     :scale: 50 %
